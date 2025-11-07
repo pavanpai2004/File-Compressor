@@ -82,7 +82,7 @@ public class FileCompressController {
 
             // Display final statistics in KB
             double beforeSizeInKb = (double) totalFileSize /1024;
-            double afterSizeInKb = (double) processedFileSize /1024;
+            double afterSizeInKb = (double) outputZip.length() /1024;
             String stat = String.format("\nOriginal size: %.2f KB\nCompressed size: %.2f KB",beforeSizeInKb,afterSizeInKb);
             logArea.setText(stat);
 
@@ -145,7 +145,7 @@ public class FileCompressController {
                 // Display final statistics in KB
                 double beforeSizeInKb = (double) totalBytes / 1024;
                 double afterSizeInKb = (double) processed / 1024;
-                String stat = String.format("\nOriginal size: %.2f KB\nCompressed size: %.2f KB",
+                String stat = String.format("\nOriginal size: %.2f KB\nDecompressed size: %.2f KB",
                         beforeSizeInKb, afterSizeInKb);
                 logArea.setText(stat);
             }
