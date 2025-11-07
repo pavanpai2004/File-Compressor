@@ -2,6 +2,11 @@
 
 A simple JavaFX application to **compress multiple files into a ZIP** and **decompress ZIP files**.  
 The application provides a **progress bar** and **log area** to display the current file being processed and the final statistics.
+---
+
+![Tool Window](images/filecomp.png)
+
+![Progress & logs](images/logs.png)
 
 ---
 
@@ -23,6 +28,13 @@ The application provides a **progress bar** and **log area** to display the curr
 
 ---
 
-## Screenshots
+## How to run
 
-![Tool Window](images/filecomp.png)
+1. Clone the repository
+    ```bash
+    git clone "https://github.com/pavanpai2004/File-Compressor.git"
+    cd File-Compressor
+   
+2. Run the project
+    ```bash
+    mvn clean javafx:run
