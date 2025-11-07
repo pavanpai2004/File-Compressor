@@ -23,7 +23,7 @@ public class Main extends Application {
             }
 
             Parent root = FXMLLoader.load(fxmlUrl);
-            Scene scene = new Scene(root,600,400);
+            Scene scene = new Scene(root,720,550);
 
 
             primaryStage.setScene(scene);

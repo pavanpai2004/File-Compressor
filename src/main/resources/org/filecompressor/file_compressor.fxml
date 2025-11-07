@@ -1,30 +1,102 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.*?>
-
-<?import javafx.scene.control.Label?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ProgressBar?>
 <?import javafx.scene.control.TextArea?>
-<BorderPane fx:id="rootPane"
-            xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="org.filecompressor.controller.FileCompressController"
-            prefHeight="400.0" prefWidth="600.0">
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
 
-    <top>
-        <Label text="File Compressor &amp; Decompressor" style="-fx-font-size: 20px; -fx-font-weight: bold;" BorderPane.alignment="CENTER"/>
-    </top>
-
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="536.0" prefWidth="708.0" style="-fx-background-color: #035785;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.filecompressor.controller.FileCompressController">
     <center>
-        <VBox spacing="10" alignment="CENTER" style="-fx-padding: 20;">
-            <HBox spacing="10" alignment="CENTER">
-                <Button fx:id="compressBtn" text="Compress Files" onAction="#handleCompress"/>
-                <Button fx:id="decompressBtn" text="Decompress File" onAction="#handleDecompress"/>
-            </HBox>
-            <ProgressBar fx:id="progressBar" prefWidth="400"/>
-            <TextArea fx:id="logArea" prefHeight="200" prefWidth="500" editable="false"/>
-        </VBox>
+        <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-insets: white;" BorderPane.alignment="CENTER">
+            <children>
+                <Button layoutX="71.0" layoutY="120.0" mnemonicParsing="false" onAction="#handleCompress" prefHeight="65.0" prefWidth="190.0" style="-fx-background-color: #e31013;" text="Compress" textFill="WHITE">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+                </Button>
+                <Label contentDisplay="CENTER" layoutX="138.0" layoutY="28.0" prefHeight="46.0" prefWidth="432.0" text="File Compressor &amp; Decompressor" textAlignment="CENTER" textFill="WHITE">
+                    <font>
+                        <Font name="Ubuntu Mono Italic" size="25.0" />
+                    </font>
+                    <padding>
+                        <Insets left="10.0" top="10.0" />
+                    </padding>
+               <effect>
+                  <DropShadow />
+               </effect>
+                </Label>
+                <Label layoutX="340.0" layoutY="132.0" text="OR" textFill="WHITE">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+                </Label>
+                <Button layoutX="458.0" layoutY="120.0" mnemonicParsing="false" onAction="#handleDecompress" prefHeight="65.0" prefWidth="190.0" style="-fx-background-color: green;" text="Decompress" textFill="WHITE">
+                    <font>
+                        <Font size="25.0" />
+                    </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+                </Button>
+                <ProgressBar fx:id="progressBar" centerShape="false" layoutX="71.0" layoutY="297.0" prefHeight="24.0" prefWidth="413.0" progress="0.0" style="-fx-accent: #4CAF50;">
+                    <opaqueInsets>
+                        <Insets top="10.0" />
+                    </opaqueInsets>
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color red="0.03628060594201088" green="0.05000000074505806" blue="0.03350000083446503" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+                </ProgressBar>
+                <TextArea fx:id="logArea" editable="false" layoutX="71.0" layoutY="414.0" prefHeight="98.0" prefWidth="419.0"
+                          style=" -fx-background-color: white;
+                                  -fx-control-inner-background: white;
+                                  -fx-focus-color: transparent;
+                                  -fx-faint-focus-color: transparent;
+                                  -fx-background-insets: 0;
+                                  -fx-background-radius: 0;
+                                  -fx-border-color: transparent;"
+                >
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                    </cursor>
+                </TextArea>
+                <Label layoutX="328.0" layoutY="172.0" prefHeight="80.0" prefWidth="52.0" text="⚙" textFill="WHITE">
+                    <font>
+                        <Font size="56.0" />
+                    </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+                </Label>
+            </children>
+            <cursor>
+                <Cursor fx:constant="OPEN_HAND" />
+            </cursor>
+            <BorderPane.margin>
+                <Insets />
+            </BorderPane.margin>
+        </Pane>
     </center>
 </BorderPane>
-
